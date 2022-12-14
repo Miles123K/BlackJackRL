@@ -13,18 +13,15 @@ namespace BlackJackRL
     {
         static void Main(string[] args)
         {
-            
 
-            //Console.WriteLine(state1.Equals(state2));
-            //Console.WriteLine(state1.GetHashCode());
-
-
-            Learner learner = new Learner();
+            PolicyAgent learner = new PolicyAgent();
             learner.Learn();
+            RandomAgent randomAgent = new RandomAgent();
 
+            randomAgent.PlayRandom(10000);
             learner.Play(2000);
-            learner.PlayRandom(2000);
 
+        
         }
     }
 }
